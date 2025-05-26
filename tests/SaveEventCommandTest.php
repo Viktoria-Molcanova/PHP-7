@@ -68,7 +68,7 @@ class SaveEventCommandTest extends TestCase
                 ],
                 true
             ],
-            // Новые проверки
+
             [
                 [
                     'name' => null,
