@@ -25,8 +25,6 @@ class SaveEventCommandTest extends TestCase
                     'text' => "some-text",
                     'receiver' => "some-reciver",
                     'cron' => "some-cron",
-                    // 'help',
-                    //  'h'
                 ],
                 false
             ],
@@ -67,8 +65,40 @@ class SaveEventCommandTest extends TestCase
                     'text' => "some-text",
                     'receiver' => null,
                     'cron' => "some-cron",
-                    // 'help',
-                    //  'h'
+                ],
+                true
+            ],
+            // Новые проверки
+            [
+                [
+                    'name' => null,
+                    'text' => null,
+                    'receiver' => null,
+                    'cron' => null,
+                    'help' => null,
+                    'h' => null
+                ],
+                true
+            ],
+            [
+                [
+                    'name' => "valid-name",
+                    'text' => "valid-text",
+                    'receiver' => "valid-receiver",
+                    'cron' => "valid-cron",
+                    'help' => null,
+                    'h' => null
+                ],
+                false
+            ],
+            [
+                [
+                    'name' => "another-name",
+                    'text' => "another-text",
+                    'receiver' => "another-receiver",
+                    'cron' => null,
+                    'help' => 'help-text',
+                    'h' => null
                 ],
                 true
             ],
